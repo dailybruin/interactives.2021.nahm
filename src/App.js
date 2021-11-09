@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import './App.css';
 
+import PictureCaptioned from './components/PictureCaptioned'
+
 function App() {
   const [ data, setData ] = useState(null);
   
@@ -14,6 +16,7 @@ function App() {
   return (
     <div className="App">
       Hello Daily Bruin!
+      <PictureCaptioned src={"logo.svg"} caption={"caption goes here"}></PictureCaptioned>
     </div>
   );
 }
