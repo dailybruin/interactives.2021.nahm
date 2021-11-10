@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import ArticleBoxBig3 from "./ArticleBoxBig3";
 import ArticleBox2 from "./ArticleBox2";
+import ArticleBoxSmall3 from "./ArticleBoxSmall3";
 
 const Grid = styled.div`
 display: grid;
@@ -16,8 +17,8 @@ export default function Grid3(){
     return (
         <Grid>
           <ArticleBoxBig3 direction="big"></ArticleBoxBig3>
-          <ArticleBox2 direction="small1"></ArticleBox2>
-          <ArticleBox2 direction="small2"></ArticleBox2>
+          <ArticleBoxSmall3 direction="small1"></ArticleBoxSmall3>
+          <ArticleBoxSmall3 direction="small2"></ArticleBoxSmall3>
         </Grid>
     );
 

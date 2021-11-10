@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Box = styled.div`
 /* height: 100%; */
-width: 80%;
+width: 85%;
 justify-self: center;
 border-style: solid;
 border-color: black;

@@ -13,7 +13,7 @@ grid-area: ${(props) => props.direction};
 `;
 
 const Image = styled.div`
-  height: 400px;
+  height: auto;
   object-fit: cover;
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
