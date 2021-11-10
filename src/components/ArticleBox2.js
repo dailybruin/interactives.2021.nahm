@@ -42,7 +42,7 @@ padding-top: 10px;
 padding-bottom: 10px;
 `;
 
-export default function ArticleBox(props) {
+export default function ArticleBox2(props) {
     let dir = props.direction;
     return (
         <Box direction = {dir}> 
