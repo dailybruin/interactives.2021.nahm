@@ -17,7 +17,7 @@ function App() {
      <div className="App">
        Hello Daily Bruin!
      </div>
-    <Grid2/>
+    {/* <Grid2/> */}
     <Grid3/>
     </>
   );

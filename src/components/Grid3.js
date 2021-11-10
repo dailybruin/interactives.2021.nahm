@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
+import ArticleBoxBig3 from "./ArticleBoxBig3";
 import ArticleBox2 from "./ArticleBox2";
 
 const Grid = styled.div`
@@ -14,7 +15,7 @@ grid-template-areas:
 export default function Grid3(){
     return (
         <Grid>
-          <ArticleBox2 direction="big"></ArticleBox2>
+          <ArticleBoxBig3 direction="big"></ArticleBoxBig3>
           <ArticleBox2 direction="small1"></ArticleBox2>
           <ArticleBox2 direction="small2"></ArticleBox2>
         </Grid>
