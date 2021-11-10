@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import './App.css';
+import Grid1 from "./components/Grid1";
+import OurGrid from "./components/Grid1";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -12,9 +14,10 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      Hello Daily Bruin!
-    </div>
+    // <div className="App">
+    //   Hello Daily Bruin!
+    // </div>
+    <Grid1/>
   );
 }
 
