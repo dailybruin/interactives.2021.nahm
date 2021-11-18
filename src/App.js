@@ -15,6 +15,8 @@ function App() {
   return (
     <div className="App">
       <ArticleLayout1/>
+      <ArticleLayout1/>
+      <ArticleLayout1/>
     </div>
   );
 }
