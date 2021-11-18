@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
-import styled from 'styled-components';
-import './App.css';
+import React, { useState, useEffect } from "react"
+import styled from 'styled-components'
+import './App.css'
+import Landing from "./components/Landing"
+import Editor from "./components/Editor"
+import Header from "./components/Header"
+
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -13,9 +17,13 @@ function App() {
 
   return (
     <div className="App">
-      Hello Daily Bruin!
+      <Header />
+      <Landing/>
+      <Editor />
+    
     </div>
   );
 }
+
 
 export default App;
