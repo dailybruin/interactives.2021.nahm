@@ -3,16 +3,21 @@ import styled from 'styled-components';
 
 
 const Box = styled.a`
-text-decoration: none;
+/* text-decoration: none; */
 color: black;
-width: calc(100% - 10px);
+/* width: calc(100% - 10px); */
 /* justify-self: center; */
 grid-area: ${(props) => props.direction};
+display: flex;
+flex-direction: column;
+text-decoration: none;;
+justify-content: center;
+align-items: center;
 `;
 
 const Image = styled.div`
-  height: 600px;
-  /* width: 100%; */
+  flex: 1 600px;
+  width: 100%;
   object-fit: cover;
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
@@ -22,6 +27,7 @@ const Image = styled.div`
 
 const Text = styled.div`
 background-color: gray;
+width: 100%;
 color: black;
 /* padding-top: 20px; */
 padding-bottom: 10px;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Box = styled.a`
 text-decoration: none;
 color: black;
-height: 95%;
+/* height: 95%; */
 /* width: calc(100% - 10px); */
 grid-area: ${(props) => props.direction};
 /* width: */
