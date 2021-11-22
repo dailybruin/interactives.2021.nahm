@@ -3,17 +3,18 @@ import styled from 'styled-components';
 
 
 const Box = styled.a`
-width: calc(100% - 10px);
+display: flex;
+flex-direction: column;
 text-decoration: none;;
-justify-self: center;
-/* border-style: solid;
-border-color: black;
-border-width: 5px; */
+justify-content: center;
+align-items: center;
 grid-area: ${(props) => props.direction};
+background-color: #448DB6;
 `;
 
 const Image = styled.div`
-  height: 50vh;
+  flex: 1 300px;
+  width: 100%;
   object-fit: cover;
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
@@ -22,12 +23,14 @@ const Image = styled.div`
 `;
 
 const Text = styled.div`
-background-color: gray;
+/* background-color: gray; */
 color: black;
+padding: 5px 10px 5px 10px;
+font: roboto;
 /* padding-top: 20px; */
-padding-bottom: 10px;
-margin-bottom: 10px;
-background-color: ${(props) => props.color};;
+/* padding-bottom: 10px;
+margin-bottom: 10px; */
+/* ; */
 `;
 
 const News = styled.div`
@@ -49,9 +52,9 @@ export default function ArticleBox2(props) {
     let color = props.color;
     if (typeof(props.text) == 'undefined' && typeof(props.caption) != 'undefined') {
         return (
-          <Box direction = {dir} href={"http://google.com"}> 
+          <Box direction = {dir} color={color} href={"http://google.com"}> 
               <Image src="" alt=""/>
-              <Text color={color}>
+              <Text>
                   Limited time on campus, remote learning presents unique challenges
                   <Byline> By Emily McAnnis </Byline>
               </Text>

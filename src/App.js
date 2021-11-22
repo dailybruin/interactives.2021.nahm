@@ -31,12 +31,8 @@ function App() {
 
   return (
     <>
-     <div className="App">
-       Hello Daily Bruin!
-     </div>
      <Container>
        {!isMobile && <>
-      <Grid1/>
         <Grid2/>
         <Grid3 twoOnRight = {true}/>
         <Grid3 twoOnLeft = {true}/> </>}
