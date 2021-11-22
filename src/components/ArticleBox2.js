@@ -27,17 +27,18 @@ color: black;
 /* padding-top: 20px; */
 padding-bottom: 10px;
 margin-bottom: 10px;
+background-color: ${(props) => props.color};;
 `;
 
 const News = styled.div`
-background-color: gray;
+/* background-color: ${(props) => props.color}; */
 color: black;
 padding-top: 8px;
 padding-bottom: 10px;
 `;
 
 const Byline = styled.div`
-background-color: gray;
+/* background-color: gray; */
 color: black;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -45,14 +46,29 @@ padding-bottom: 10px;
 
 export default function ArticleBox2(props) {
     let dir = props.direction;
-    return (
-        <Box direction = {dir} href={"http://google.com"}> 
-            <Image src="" alt=""/>
-            <Text>
-                <News> NEWS </News>
-                Limited time on campus, remote learning presents unique challenges
-                <Byline> By Emily McAnnis </Byline>
-            </Text>
-        </Box>
-      );
+    let color = props.color;
+    if (typeof(props.text) == 'undefined' && typeof(props.caption) != 'undefined') {
+        return (
+          <Box direction = {dir} href={"http://google.com"}> 
+              <Image src="" alt=""/>
+              <Text color={color}>
+                  Limited time on campus, remote learning presents unique challenges
+                  <Byline> By Emily McAnnis </Byline>
+              </Text>
+          </Box>
+        );
+    }
+
+    else {
+      return (
+          <Box direction = {dir} href={"http://google.com"}> 
+              <Image src="" alt=""/>
+              <Text color={color}>
+                  <News> NEWS </News>
+                  Limited time on campus, remote learning presents unique challenges
+                  <Byline> By Emily McAnnis </Byline>
+              </Text>
+          </Box>
+        );
+    }
 }

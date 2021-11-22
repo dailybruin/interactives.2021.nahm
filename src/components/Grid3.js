@@ -23,13 +23,21 @@ grid-template-areas:
   padding-bottom: 40px;
 `;
 
+const colorToString = {
+  "greyish_blue": "#607888",
+  "blue": "#448DB6",
+  "yellow": "#D7AB4A",
+  "brown": "#A15026"
+};
+
+
 export default function Grid3(props){
   if (props.twoOnRight) {
     return (
         <Grid>
-          <ArticleBoxBig3 direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
-          <ArticleBoxSmall3 direction="small1"></ArticleBoxSmall3>
-          <ArticleBoxSmall3 direction="small2"></ArticleBoxSmall3>
+          <ArticleBoxBig3 color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
+          <ArticleBoxSmall3 color={colorToString["brown"]} direction="small1"></ArticleBoxSmall3>
+          <ArticleBoxSmall3 color={colorToString["blue"]} direction="small2"></ArticleBoxSmall3>
         </Grid>
     );
   }
@@ -37,9 +45,9 @@ export default function Grid3(props){
   else if (props.twoOnLeft) {
     return (
         <OtherGrid>
-          <ArticleBoxBig3 direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
-          <ArticleBoxSmall3 direction="small1"></ArticleBoxSmall3>
-          <ArticleBoxSmall3 direction="small2"></ArticleBoxSmall3>
+          <ArticleBoxBig3 color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
+          <ArticleBoxSmall3 color={colorToString["brown"]} direction="small1"></ArticleBoxSmall3>
+          <ArticleBoxSmall3 color={colorToString["yellow"]} direction="small2"></ArticleBoxSmall3>
         </OtherGrid>
     );
 

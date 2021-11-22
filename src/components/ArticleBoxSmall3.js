@@ -18,39 +18,29 @@ const Image = styled.div`
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
   background-size: cover;
-  border-top-width: 5px;
-  border-left-width: 5px;
-  border-right-width: 5px;
-  border-top-style: solid;
-  border-left-style: solid;
-  border-right-style: solid;
+  
   /* position: relative; */
 `;
 
 const Text = styled.div`
-background-color: gray;
+/* background-color: gray; */
 color: black;
 min-height: 30%;
 /* padding-top: 20px; */
 /* margin-bottom: 800px; */
 /* padding-bottom: 10px; */
-border-bottom-width: 5px;
-border-bottom-style: solid;
-border-left-width: 5px;
-border-right-width: 5px;
-border-left-style: solid;
-border-right-style: solid;
+background-color: ${(props) => props.color};
 `;
 
 const News = styled.div`
-background-color: gray;
+/* background-color: gray; */
 color: black;
 padding-top: 8px;
 padding-bottom: 10px;
 `;
 
 const Byline = styled.div`
-background-color: gray;
+/* background-color: gray; */
 color: black;
 padding-top: 10px;
 /* padding-bottom: 10px; */
@@ -63,7 +53,7 @@ export default function ArticleBoxSmall3(props) {
     return (
         <Box direction = {dir} href={source}> 
             <Image src="" alt=""/>
-            <Text>
+            <Text color={props.color}>
                 <News> NEWS </News>
                 Limited time on campus, remote learning presents unique challenges
                 <Byline> By Emily McAnnis </Byline>

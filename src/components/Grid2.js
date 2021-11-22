@@ -13,11 +13,19 @@ grid-template-areas:
 padding-bottom: 20px;
 `;
 
+const colorToString = {
+  "greyish_blue": "#607888",
+  "blue": "#448DB6",
+  "yellow": "#D7AB4A",
+  "brown": "#A15026"
+};
+
+
 export default function Grid2(){
     return (
         <Grid>
-          <ArticleBox2 direction="left"></ArticleBox2>
-          <ArticleBox2 direction="right"></ArticleBox2>
+          <ArticleBox2 direction="left" color = {colorToString['blue']}></ArticleBox2>
+          <ArticleBox2 direction="right" color={colorToString['yellow']}></ArticleBox2>
         </Grid>
     );
 
