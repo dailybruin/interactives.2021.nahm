@@ -12,6 +12,13 @@ margin-right: 50px;
 `
 
 function App() {
+  const media = window.matchMedia('(max-width: 450px)');
+  const [isMobile, setIsMobile] = useState(media.matches);
+  media.addEventListener('change', () => {
+  if (media.matches !== isMobile) {
+      setIsMobile(media.matches);
+  }
+  });
   // const [ data, setData ] = useState(null);
   
   // useEffect(() => {
@@ -31,11 +38,13 @@ function App() {
        Hello Daily Bruin!
      </div>
      <Container>
-     <Grid1/>
-      <Grid2/>
-      <Grid3 twoOnRight = {true}/>
-      <Grid3 twoOnLeft = {true}/>
-      <MobileArticles/>
+       {!isMobile && <>
+      <Grid1/>
+        <Grid2/>
+        <Grid3 twoOnRight = {true}/>
+        <Grid3 twoOnLeft = {true}/> </>}
+      {isMobile && 
+      <MobileArticles/>}
     </Container>
     </>
   );
