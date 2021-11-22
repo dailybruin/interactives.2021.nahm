@@ -6,8 +6,10 @@ import ArticleBoxSmall3 from "./ArticleBoxSmall3";
 
 const Grid = styled.div`
 display: grid;
-grid-template-columns:  calc(30% - 5px) 10px calc(70% - 5px);
+grid-template-columns:  calc(45% - 5px) 10px calc(55% - 5px);
 grid-template-rows: auto auto;
+row-gap: 10px;
+/* column-gap: 5px; */
 grid-template-areas: 
   "big space small1"
   "big space small2";
@@ -15,7 +17,8 @@ grid-template-areas:
 `;
 const OtherGrid = styled.div`
 display: grid;
-grid-template-columns: calc(70% - 5px) 10px calc(30% - 5px);
+grid-template-columns: calc(55% - 5px) 10px calc(45% - 5px);
+row-gap: 10px;
 grid-template-rows: auto auto auto;
 grid-template-areas: 
   "small1 space big"

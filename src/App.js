@@ -7,8 +7,7 @@ import styled from "styled-components";
 import MobileArticles from "./components/MobileArticles";
 
 const Container = styled.div`
-margin-left: 50px;
-margin-right: 50px;
+margin: 10px 100px 10px 100px;
 `
 
 function App() {

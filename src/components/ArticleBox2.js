@@ -9,7 +9,8 @@ text-decoration: none;;
 justify-content: center;
 align-items: center;
 grid-area: ${(props) => props.direction};
-background-color: #448DB6;
+background-color: ${(props) => props.color};
+
 `;
 
 const Image = styled.div`
@@ -24,9 +25,11 @@ const Image = styled.div`
 
 const Text = styled.div`
 /* background-color: gray; */
+/* width: 100%; */
 color: black;
 padding: 5px 10px 5px 10px;
 font: roboto;
+
 /* padding-top: 20px; */
 /* padding-bottom: 10px;
 margin-bottom: 10px; */
@@ -54,7 +57,7 @@ export default function ArticleBox2(props) {
         return (
           <Box direction = {dir} color={color} href={"http://google.com"}> 
               <Image src="" alt=""/>
-              <Text>
+              <Text >
                   Limited time on campus, remote learning presents unique challenges
                   <Byline> By Emily McAnnis </Byline>
               </Text>
@@ -64,7 +67,7 @@ export default function ArticleBox2(props) {
 
     else {
       return (
-          <Box direction = {dir} href={"http://google.com"}> 
+          <Box direction = {dir} color={color} href={"http://google.com"}> 
               <Image src="" alt=""/>
               <Text color={color}>
                   <News> NEWS </News>
