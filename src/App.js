@@ -3,6 +3,7 @@ import './App.css';
 import Grid2 from "./components/Grid2";
 import Grid3 from "./components/Grid3";
 import styled from "styled-components";
+import MobileArticles from "./components/MobileArticles";
 
 const Container = styled.div`
 margin-left: 50px;
@@ -27,6 +28,7 @@ function App() {
       <Grid2/>
       <Grid3 twoOnRight = {true}/>
       <Grid3 twoOnLeft = {true}/>
+      <MobileArticles/>
     </Container>
     </>
   );

@@ -20,7 +20,7 @@ grid-template-rows: auto auto auto;
 grid-template-areas: 
   "small1 space big"
   "small2 space big";
-  padding-bottom: 0px;
+  padding-bottom: 40px;
 `;
 
 export default function Grid3(props){

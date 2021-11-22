@@ -5,9 +5,10 @@ import styled from 'styled-components';
 const Box = styled.a`
 text-decoration: none;
 color: black;
-min-height: 95%;
-width: calc(100% - 10px);
+height: 95%;
+/* width: calc(100% - 10px); */
 grid-area: ${(props) => props.direction};
+/* width: */
 /* margin-top: 100px; */
 `;
 
@@ -31,7 +32,8 @@ background-color: gray;
 color: black;
 min-height: 30%;
 /* padding-top: 20px; */
-padding-bottom: 10px;
+/* margin-bottom: 800px; */
+/* padding-bottom: 10px; */
 border-bottom-width: 5px;
 border-bottom-style: solid;
 border-left-width: 5px;

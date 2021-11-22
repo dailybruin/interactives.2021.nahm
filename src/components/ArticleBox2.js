@@ -6,9 +6,9 @@ const Box = styled.a`
 width: calc(100% - 10px);
 text-decoration: none;;
 justify-self: center;
-border-style: solid;
+/* border-style: solid;
 border-color: black;
-border-width: 5px;
+border-width: 5px; */
 grid-area: ${(props) => props.direction};
 `;
 
@@ -26,6 +26,7 @@ background-color: gray;
 color: black;
 /* padding-top: 20px; */
 padding-bottom: 10px;
+margin-bottom: 10px;
 `;
 
 const News = styled.div`
