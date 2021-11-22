@@ -4,10 +4,13 @@ import ArticleBox2 from "./ArticleBox2";
 
 const Grid = styled.div`
 display: grid;
-grid-template-columns: auto auto;
+/* height: 60vh; */
+margin-left: 0;
+grid-template-columns: auto 10px auto;
 grid-template-rows: auto;
 grid-template-areas: 
-  "left right"
+  "left space right";
+padding-bottom: 20px;
 `;
 
 export default function Grid2(){

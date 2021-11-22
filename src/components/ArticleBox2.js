@@ -3,17 +3,16 @@ import styled from 'styled-components';
 
 
 const Box = styled.div`
-/* height: 100%; */
-width: 80%;
+width: calc(100% - 10px);
 justify-self: center;
 border-style: solid;
 border-color: black;
-border-width: medium;
+border-width: 5px;
 grid-area: ${(props) => props.direction};
 `;
 
 const Image = styled.div`
-  height: auto;
+  height: 50vh;
   object-fit: cover;
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;

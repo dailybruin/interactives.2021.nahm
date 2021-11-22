@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Grid2 from "./components/Grid2";
 import Grid3 from "./components/Grid3";
+import styled from "styled-components";
+
+const Container = styled.div`
+margin-left: 50px;
+margin-right: 50px;
+`
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -17,8 +23,11 @@ function App() {
      <div className="App">
        Hello Daily Bruin!
      </div>
-    {/* <Grid2/> */}
-    <Grid3/>
+     <Container>
+      <Grid2/>
+      <Grid3 twoOnRight = {true}/>
+      <Grid3 twoOnLeft = {true}/>
+    </Container>
     </>
   );
 }
