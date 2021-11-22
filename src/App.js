@@ -19,19 +19,16 @@ function App() {
       setIsMobile(media.matches);
   }
   });
-  // const [ data, setData ] = useState(null);
-  
-  // useEffect(() => {
-	// 	fetch("<TODO: insert api url here>")
-	// 	.then(res => res.json())
-	// 	.then(res => setData(res.data['article.aml']))
-  // }, [])
 
-  // return (
-  //   <div className="App">
-  //     Hello Daily Bruin!
-  //   </div>
-  // );
+  const [ data, setData ] = useState(null);
+  
+  useEffect(() => {
+		fetch("<TODO: insert api url here>")
+		.then(res => res.json())
+		.then(res => setData(res.data['article.aml']))
+  }, [])
+
+
   return (
     <>
      <div className="App">
