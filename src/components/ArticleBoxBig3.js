@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
 
-const Box = styled.div`
-/* height: 100%; */
-/* margin-left: 0px; */
-/* margin-left: 70px; */
-/* margin-left: 5px; */
+const Box = styled.a`
+text-decoration: none;
+color: black;
 width: calc(100% - 10px);
 /* justify-self: center; */
 border-style: solid;
@@ -52,8 +50,9 @@ padding-bottom: 10px;
 export default function ArticleBoxBig3(props) {
     let dir = props.direction;
     let caption = props.text;
+    let source = "http://google.com"; //get it from props.src
     return (
-        <Box direction = {dir}> 
+        <Box direction = {dir} href={source}> 
             <Image src="" alt=""/>
             <Text>
                 {/* <News> NEWS </News>

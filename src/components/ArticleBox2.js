@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
 
-const Box = styled.div`
+const Box = styled.a`
 width: calc(100% - 10px);
+text-decoration: none;;
 justify-self: center;
 border-style: solid;
 border-color: black;
@@ -44,7 +45,7 @@ padding-bottom: 10px;
 export default function ArticleBox2(props) {
     let dir = props.direction;
     return (
-        <Box direction = {dir}> 
+        <Box direction = {dir} href={"http://google.com"}> 
             <Image src="" alt=""/>
             <Text>
                 <News> NEWS </News>

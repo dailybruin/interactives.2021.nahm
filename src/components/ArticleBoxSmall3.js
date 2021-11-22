@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
 
-const Box = styled.div`
+const Box = styled.a`
+text-decoration: none;
+color: black;
 min-height: 95%;
 width: calc(100% - 10px);
 grid-area: ${(props) => props.direction};
@@ -54,8 +56,10 @@ padding-top: 10px;
 
 export default function ArticleBoxSmall3(props) {
     let dir = props.direction;
+    let source = "http://google.com"; //get value from props.src
+
     return (
-        <Box direction = {dir}> 
+        <Box direction = {dir} href={source}> 
             <Image src="" alt=""/>
             <Text>
                 <News> NEWS </News>
