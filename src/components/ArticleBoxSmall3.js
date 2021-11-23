@@ -53,10 +53,13 @@ padding: 20px;
 font-family: 'Roboto', sans-serif;
 font-weight: 700;
 background-color: ${(props) => props.color};
+${mediaQueries.tablet}{
+  width: auto;
+}
 `;
 
 const News = styled.div`
-padding-top: 8px;
+/* padding-top: 8px; */
 padding-bottom: 10px;
 font-weight: 500;
 `;
@@ -64,6 +67,7 @@ font-weight: 500;
 const Byline = styled.div`
 padding-top: 10px;
 font-weight: 400;
+
 `;
 
 export default function ArticleBoxSmall3(props) {
