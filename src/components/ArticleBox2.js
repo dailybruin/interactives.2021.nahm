@@ -29,10 +29,9 @@ const Text = styled.div`
 color: black;
 padding: 5px 10px 5px 10px;
 font: roboto;
-
+margin-bottom: 10px;
 /* padding-top: 20px; */
 /* padding-bottom: 10px;
-margin-bottom: 10px; */
 /* ; */
 `;
 

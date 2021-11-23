@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleBox2 from "./ArticleBox2";
+import styled from "styled-components";
 
 const colorToString = [
     "#607888",
@@ -8,6 +9,9 @@ const colorToString = [
     "#A15026"
 ];
 
+const Container = styled.div`
+    padding-bottom: 10px;
+`
 export default function MobileArticles(props) {
     let articleDetails = props.articles;
     if (typeof props.articles == "undefined") {
@@ -15,9 +19,9 @@ export default function MobileArticles(props) {
         let arr = []
         for (var i = 0; i < 8; i++) {
             let color = colorToString[i%4];
-            arr.push((<div>
+            arr.push((<Container>
                 <ArticleBox2 color={color} text={"For any newspaper crap"} caption={"for any image crap"}/>
-                </div>));
+                </Container>));
         }
 
         return (
