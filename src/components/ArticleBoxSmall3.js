@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
+import { mediaQueries } from '../shared/config';
 
 
 const Box = styled.a`
@@ -12,6 +13,10 @@ color: black;
 grid-area: ${(props) => props.direction};
 /* width: */
 /* margin-top: 100px; */
+${mediaQueries.tablet}{
+  flex-direction: column;
+  grid-gap: 8px;
+}
 `;
 
 const ReverseBox = styled.a`
@@ -24,6 +29,10 @@ color: black;
 grid-area: ${(props) => props.direction};
 /* width: */
 /* margin-top: 100px; */
+
+${mediaQueries.tablet}{
+  flex-direction: column;
+}
 `
 
 const Image = styled.div`
@@ -34,6 +43,10 @@ const Image = styled.div`
   background-size: cover;
   width: 70%;
   /* position: relative; */
+  ${mediaQueries.tablet}{
+  width: 100%;
+  min-height: 300px;
+}
 `;
 
 const Text = styled.div`
@@ -79,7 +92,7 @@ export default function ArticleBoxSmall3(props) {
         <ReverseBox direction = {dir} href={source}> 
             <Image src="" alt=""/>
             <Text color={props.color}>
-                <News> NEWS </News>
+                <News> TWO ON LEFT </News>
                 Limited time on campus, remote learning presents unique challenges
                 <Byline> By Emily McAnnis </Byline>
             </Text>

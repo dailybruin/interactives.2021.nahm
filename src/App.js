@@ -31,12 +31,9 @@ function App() {
   return (
     <>
      <Container>
-       {!isMobile && <>
         <Grid2/>
         <Grid3 twoOnRight = {true}/>
-        <Grid3 twoOnLeft = {true}/> </>}
-      {isMobile && 
-      <MobileArticles/>}
+        <Grid3 twoOnLeft = {true}/>
     </Container>
     </>
   );

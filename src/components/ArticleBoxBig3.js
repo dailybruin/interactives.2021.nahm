@@ -5,14 +5,14 @@ import styled from 'styled-components';
 const Box = styled.a`
 /* text-decoration: none; */
 color: black;
-/* width: calc(100% - 10px); */
-/* justify-self: center; */
+
 grid-area: ${(props) => props.direction};
 display: flex;
 flex-direction: column;
 text-decoration: none;;
 justify-content: center;
 align-items: center;
+grid-gap: 8px; 
 `;
 
 const Image = styled.div`
