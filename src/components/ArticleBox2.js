@@ -8,43 +8,39 @@ flex-direction: column;
 text-decoration: none;;
 justify-content: center;
 align-items: center;
-grid-area: ${(props) => props.direction};
 background-color: ${(props) => props.color};
+/* max-height:400px; */
 
 `;
 
 const Image = styled.div`
-  flex: 1 300px;
+  flex: 1 200px;
+  min-height: 420px;
   width: 100%;
-  object-fit: cover;
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
   background-size: cover;
-  /* position: relative; */
 `;
 
 const Text = styled.div`
-/* background-color: gray; */
-/* width: 100%; */
-color: black;
-padding: 5px 10px 5px 10px;
-font: roboto;
-margin-bottom: 10px;
-/* padding-top: 20px; */
-/* padding-bottom: 10px;
-/* ; */
+width: 90%;
+color: white;
+text-align: left;
+margin: 15px;
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+font-size: 20px;
+
 `;
 
 const News = styled.div`
-/* background-color: ${(props) => props.color}; */
-color: black;
 padding-top: 8px;
 padding-bottom: 10px;
+font-weight: 500;
 `;
 
 const Byline = styled.div`
-/* background-color: gray; */
-color: black;
+font-weight: 400;
 padding-top: 10px;
 padding-bottom: 10px;
 `;

@@ -19,7 +19,7 @@ display: flex;
 flex-direction: row-reverse;
 text-decoration: none;
 color: black;
-height: 95%;
+/* height: 95%; */
 /* width: calc(100% - 10px); */
 grid-area: ${(props) => props.direction};
 /* width: */

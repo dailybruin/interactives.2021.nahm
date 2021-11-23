@@ -1,16 +1,28 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import ArticleBox2 from "./ArticleBox2";
+import { mediaQueries } from '../shared/config';
 
 const Grid = styled.div`
 display: grid;
 /* height: 60vh; */
-margin-left: 0;
-grid-template-columns: auto 10px auto;
-grid-template-rows: auto;
+/* margin-left: 0; */
+grid-template-columns: repeat(2,1fr);
+grid-gap: 20px;
+margin-bottom: 20px;
+/* 
 grid-template-areas: 
   "left space right";
-padding-bottom: 20px;
+padding-bottom: 20px; */
+
+${mediaQueries.tablet}{
+grid-template-columns: 100%;
+grid-template-rows: auto;
+grid-column-gap: 0;
+grid-row-gap: 10px;
+
+}
+
 `;
 
 const colorToString = {
