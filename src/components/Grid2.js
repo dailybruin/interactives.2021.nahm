@@ -5,8 +5,6 @@ import { mediaQueries } from '../shared/config';
 
 const Grid = styled.div`
 display: grid;
-/* height: 60vh; */
-/* margin-left: 0; */
 grid-template-columns: repeat(2,1fr);
 grid-gap: 20px;
 margin-bottom: 20px;
