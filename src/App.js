@@ -15,8 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      Hello Daily Bruin!
-      <PictureCaptioned src={"logo.svg"} caption={"caption goes here"}></PictureCaptioned>
+      <PictureCaptioned src={"logo.svg"} caption="caption goes here" isRight credits="Hello"></PictureCaptioned>
     </div>
   );
 }
