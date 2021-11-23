@@ -6,7 +6,7 @@ const Container = styled.div`
     /* grid-template-rows: 6fr 1fr; */
     width: 500px;
     height: 600px;
-    border-style: dashed;
+    /* border-style: dashed; */
     position: relative;
 `
 
