@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
+import { mediaQueries } from '../shared/config';
 
 
 const Box = styled.a`
@@ -9,8 +10,10 @@ text-decoration: none;;
 justify-content: center;
 align-items: center;
 background-color: ${(props) => props.color};
-/* max-height:400px; */
-
+/*  */
+${mediaQueries.tablet}{
+    /* max-height:400px; */
+}
 `;
 
 const Image = styled.div`
@@ -20,6 +23,9 @@ const Image = styled.div`
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
   background-size: cover;
+  ${mediaQueries.tablet}{
+    min-height: 210px;
+}
 `;
 
 const Text = styled.div`
@@ -30,6 +36,10 @@ margin: 15px;
 font-family: 'Roboto', sans-serif;
 font-weight: 700;
 font-size: 20px;
+
+${mediaQueries.tablet}{
+    font-size: 15px;
+}
 
 `;
 

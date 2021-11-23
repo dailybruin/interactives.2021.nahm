@@ -5,13 +5,17 @@ import Grid1 from "./components/Grid1";
 import Grid2 from "./components/Grid2";
 import Grid3 from "./components/Grid3";
 import styled from "styled-components";
-import MobileArticles from "./components/MobileArticles";
 import Landing from "./components/Landing";
 import Editor from "./components/Editor";
 import Header from "./components/Header";
+import { mediaQueries } from './shared/config';
 
 const Container = styled.div`
-margin: 10px 100px 10px 100px;
+padding: 10px 100px 10px 100px;
+background-color: yellow;
+${mediaQueries.tablet}{
+  padding: 10px 40px 10px 40px;
+}
 `
 
 
@@ -38,9 +42,10 @@ function App() {
     <div className="App">
       <Header />
       <Landing/>
-      <Editor />
+      
     <>
      <Container>
+        <Editor />
         <Grid2/>
         <Grid3 twoOnRight/>
         <Grid3/>

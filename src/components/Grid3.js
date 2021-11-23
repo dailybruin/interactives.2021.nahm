@@ -11,8 +11,8 @@ width: 100%;
 display: grid;
 grid-template-columns: 45% 55%;
 grid-template-rows: auto auto;
-column-gap: 10px;
-row-gap: 10px;
+column-gap: 20px;
+row-gap: 20px;
 /* column-gap: 5px; */
 grid-template-areas: 
   "big small1"
@@ -35,8 +35,8 @@ grid-template-areas:
 const OtherGrid = styled.div`
 display: grid;
 grid-template-columns: 55% 45%;
-row-gap: 10px;
-column-gap: 10px;
+row-gap: 20px;
+column-gap: 20px;
 grid-template-rows: auto auto;
 grid-template-areas: 
   "small1 big"

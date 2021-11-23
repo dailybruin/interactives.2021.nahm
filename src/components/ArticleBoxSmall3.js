@@ -42,7 +42,7 @@ const Image = styled.div`
   /* position: relative; */
   ${mediaQueries.tablet}{
   width: 100%;
-  min-height: 300px;
+  min-height: 210px;
 }
 `;
 
@@ -55,6 +55,8 @@ font-weight: 700;
 background-color: ${(props) => props.color};
 ${mediaQueries.tablet}{
   width: auto;
+  text-align: left;
+  font-size: 15px;
 }
 `;
 

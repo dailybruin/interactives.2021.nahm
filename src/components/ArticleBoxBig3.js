@@ -12,6 +12,10 @@ flex-direction: column;
 text-decoration: none;;
 justify-content: center;
 align-items: center;
+
+${mediaQueries.tablet}{
+  align-items: left;
+}
  
 `;
 
@@ -24,6 +28,9 @@ const Image = styled.div`
   background-size: cover;
   position: relative;
   /* position: relative; */
+  ${mediaQueries.tablet}{
+    flex: 1 300px;
+}
 `;
 
 const Text = styled.div`
@@ -37,6 +44,10 @@ min-height: 60px;
 justify-content: center;
 text-align: center;
 background-color: ${(props) => props.color};
+
+${mediaQueries.tablet}{
+    font-size: 13px;
+}
 `;
 
 const News = styled.div`

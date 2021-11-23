@@ -17,7 +17,7 @@ ${mediaQueries.tablet}{
 grid-template-columns: 100%;
 grid-template-rows: auto;
 grid-column-gap: 0;
-grid-row-gap: 10px;
+grid-row-gap: 35px;
 
 }
 

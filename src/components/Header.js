@@ -17,6 +17,7 @@ const DBHeader = styled("div")`
   text-transform: uppercase;
   font-size: 18px;
   line-height: 21.6px;
+  background: grey;
 `;
 
 const Header = () => {
