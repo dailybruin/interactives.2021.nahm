@@ -7,7 +7,7 @@ const Box = styled("div")`
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  //background-image: url(${landingpage});
+  /* add background image details */
   background-position: center;
   background-size: cover;
   position: relative;
