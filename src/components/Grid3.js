@@ -20,13 +20,15 @@ grid-template-areas:
 margin-bottom: 20px;
 
 ${mediaQueries.tablet}{
-grid-template-columns: 100%;
+/* grid-template-columns: 100%;
 grid-template-rows: auto auto auto;
 gap: 8px 0px; 
 grid-template-areas:
   "small1"
   "big"
-  "small2";
+  "small2"; */
+  display:flex;
+  flex-direction: column;
 
 }
 `;
@@ -42,14 +44,16 @@ grid-template-areas:
 padding-bottom: 40px;
 
 ${mediaQueries.tablet}{
-grid-template-columns: 100%;
+/* grid-template-columns: 100%;
 grid-template-rows: auto auto auto;;
 grid-template-areas:
   "small1"
   "small2"
   "big";
-gap: 8px 0px; 
-}
+gap: 8px 0px; */
+display:flex;
+flex-direction: column;
+} 
 `;
 
 const colorToString = {
@@ -61,17 +65,18 @@ const colorToString = {
 
 
 export default function Grid3(props){
+  console.log(props.twoOnright);
   if (props.twoOnRight) {
     return (
         <Grid>
-          <ArticleBoxBig3 color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
-          <ArticleBoxSmall3 color={colorToString["brown"]} direction="small1"></ArticleBoxSmall3>
-          <ArticleBoxSmall3 color={colorToString["blue"]} direction="small2"></ArticleBoxSmall3>
+          <ArticleBoxBig3 twoOnRight={props.twoOnRight} color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
+          <ArticleBoxSmall3 twoOnRight={props.twoOnRight} color={colorToString["brown"]} direction="small1"></ArticleBoxSmall3>
+          <ArticleBoxSmall3 twoOnRight={props.twoOnRight} color={colorToString["blue"]} direction="small2"></ArticleBoxSmall3>
         </Grid>
     );
   }
 
-  else if (props.twoOnLeft) {
+  else{
     return (
         <OtherGrid>
           <ArticleBoxBig3 color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
