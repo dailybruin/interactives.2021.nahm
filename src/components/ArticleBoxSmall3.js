@@ -7,15 +7,11 @@ const Box = styled.a`
 display: flex;
 flex-direction: row;
 text-decoration: none;
-color: black;
-/* height: 95%; */
-/* width: calc(100% - 10px); */
+color: white;
 grid-area: ${(props) => props.direction};
-/* width: */
-/* margin-top: 100px; */
+flex: 1 200px;
 ${mediaQueries.tablet}{
   flex-direction: column;
-  grid-gap: 8px;
 }
 `;
 
@@ -41,7 +37,8 @@ const Image = styled.div`
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
   background-size: cover;
-  width: 70%;
+  min-width: 50%;
+
   /* position: relative; */
   ${mediaQueries.tablet}{
   width: 100%;
@@ -50,26 +47,23 @@ const Image = styled.div`
 `;
 
 const Text = styled.div`
-color: black;
-min-height: 30%;
-/* padding-top: 20px; */
-/* margin-bottom: 800px; */
-/* padding-bottom: 10px; */
+color: white;
+width: 100%;
+padding: 20px;
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
 background-color: ${(props) => props.color};
 `;
 
 const News = styled.div`
-/* background-color: gray; */
-color: black;
 padding-top: 8px;
 padding-bottom: 10px;
+font-weight: 500;
 `;
 
 const Byline = styled.div`
-/* background-color: gray; */
-color: black;
 padding-top: 10px;
-/* padding-bottom: 10px; */
+font-weight: 400;
 `;
 
 export default function ArticleBoxSmall3(props) {
@@ -87,15 +81,16 @@ export default function ArticleBoxSmall3(props) {
         </Box>
       );
     }
-    else {
+    else{
       return (
         <ReverseBox direction = {dir} href={source}> 
             <Image src="" alt=""/>
             <Text color={props.color}>
                 <News> TWO ON LEFT </News>
-                Limited time on campus, remote learning presents unique challenges
+                article title
                 <Byline> By Emily McAnnis </Byline>
             </Text>
+            
             </ReverseBox>
       );
 

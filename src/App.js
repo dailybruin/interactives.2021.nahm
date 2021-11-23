@@ -32,8 +32,8 @@ function App() {
     <>
      <Container>
         <Grid2/>
-        <Grid3 twoOnRight = {true}/>
-        <Grid3 twoOnLeft = {true}/>
+        <Grid3 twoOnRight/>
+        <Grid3/>
     </Container>
     </>
   );
