@@ -5,13 +5,20 @@ import { mediaQueries } from '../shared/config';
 
 const Box = styled.a`
 display: flex;
+
 flex-direction: row;
 text-decoration: none;
 color: white;
+background-color: ${(props) => props.color};
 grid-area: ${(props) => props.direction};
 flex: 1 200px;
+&:hover{
+        box-shadow: 5px 5px 5px rgba(0,0,0);
+    }
 ${mediaQueries.tablet}{
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 `;
 
@@ -20,41 +27,41 @@ display: flex;
 flex-direction: row-reverse;
 text-decoration: none;
 color: black;
-/* height: 95%; */
-/* width: calc(100% - 10px); */
+background-color: ${(props) => props.color};
 grid-area: ${(props) => props.direction};
-/* width: */
-/* margin-top: 100px; */
+&:hover{
+        box-shadow: 5px 5px 5px rgba(0,0,0);
+    }
 
 ${mediaQueries.tablet}{
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 `
 
 const Image = styled.div`
-  /* height: 70%; */
   object-fit: cover;
   background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
   background-position: center;
   background-size: cover;
   min-width: 50%;
 
-  /* position: relative; */
   ${mediaQueries.tablet}{
-  width: 100%;
-  min-height: 210px;
+    width: 100%;
+    min-height: 210px;
 }
 `;
 
 const Text = styled.div`
 color: white;
-width: 100%;
-padding: 20px;
+width: 90%;
+margin: 15px;
+
 font-family: 'Roboto', sans-serif;
 font-weight: 700;
-background-color: ${(props) => props.color};
+text-align: left;
 ${mediaQueries.tablet}{
-  width: auto;
   text-align: left;
   font-size: 15px;
 }
@@ -77,9 +84,9 @@ export default function ArticleBoxSmall3(props) {
     let source = "http://google.com"; //get value from props.src
     if (props.twoOnRight) {
     return (
-        <Box direction = {dir} href={source}> 
+        <Box color={props.color} direction = {dir} href={source}> 
             <Image src="" alt=""/>
-            <Text color={props.color}>
+            <Text >
                 <News> NEWS </News>
                 Limited time on campus, remote learning presents unique challenges
                 <Byline> By Emily McAnnis </Byline>
@@ -89,7 +96,7 @@ export default function ArticleBoxSmall3(props) {
     }
     else{
       return (
-        <ReverseBox direction = {dir} href={source}> 
+        <ReverseBox color={props.color} direction = {dir} href={source}> 
             <Image src="" alt=""/>
             <Text color={props.color}>
                 <News> TWO ON LEFT </News>

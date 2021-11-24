@@ -9,7 +9,7 @@ import { mediaQueries } from '../shared/config';
 const Grid = styled.div`
 width: 100%;
 display: grid;
-grid-template-columns: 45% 55%;
+grid-template-columns: calc(45%-10px) calc(55%-10px);
 grid-template-rows: auto auto;
 column-gap: 20px;
 row-gap: 20px;
@@ -20,37 +20,25 @@ grid-template-areas:
 margin-bottom: 20px;
 
 ${mediaQueries.tablet}{
-/* grid-template-columns: 100%;
-grid-template-rows: auto auto auto;
-gap: 8px 0px; 
-grid-template-areas:
-  "small1"
-  "big"
-  "small2"; */
   display:flex;
   flex-direction: column;
 
 }
 `;
 const OtherGrid = styled.div`
+width: 100%;
 display: grid;
 grid-template-columns: 55% 45%;
-row-gap: 20px;
-column-gap: 20px;
 grid-template-rows: auto auto;
+column-gap: 20px;
+row-gap: 20px;
+
 grid-template-areas: 
   "small1 big"
   "small2 big";
 padding-bottom: 40px;
 
 ${mediaQueries.tablet}{
-/* grid-template-columns: 100%;
-grid-template-rows: auto auto auto;;
-grid-template-areas:
-  "small1"
-  "small2"
-  "big";
-gap: 8px 0px; */
 display:flex;
 flex-direction: column;
 } 

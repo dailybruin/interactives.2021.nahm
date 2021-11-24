@@ -10,10 +10,10 @@ text-decoration: none;;
 justify-content: center;
 align-items: center;
 background-color: ${(props) => props.color};
-/*  */
-${mediaQueries.tablet}{
-    /* max-height:400px; */
-}
+&:hover{
+        box-shadow: 5px 5px 5px rgba(0,0,0);
+    }
+
 `;
 
 const Image = styled.div`

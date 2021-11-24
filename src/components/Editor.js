@@ -12,7 +12,7 @@ const WhiteBox = styled("div")`
 const Header = styled("div")`
     background: #448DB6;
     padding: 50px;
-    width: 15%;
+    width: 40%;
     color: white;
     font-weight: bold;
     font-size: 36px;
@@ -26,9 +26,11 @@ const Header = styled("div")`
     top: 50px;
 
     ${mediaQueries.tablet}{
-    width: 30%;
-    font-size: 30px;
+    width: 40%;
+    height: 20px;
+    font-size: 20px;
     padding: 40px;
+    /* top: 60px; */
 }
 
 `
@@ -44,21 +46,37 @@ const Box = styled("div")`
     position: aboslute;
     z-index: 0;
     ${mediaQueries.tablet}{
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-size: 30px;
-    padding: 40px;
 }
 `
 
 const TextWrap = styled("div")`
     padding: 70px;
-    width: 70%;
-    font-size: 24px;
-    color: #4A4D55;
-    font-weight: bold;
-    text-align: left;
-    margin: auto;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    /* color: #4A4D55; */
+    font-weight: 700;
+    /* text-align: left; */
+    /* margin: auto; */
+    /* justify-content: center; */
+
+    ${mediaQueries.tablet}{
+    font-size: 12px;
+    width: 50%;
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    margin: 5px;
+    width: 80%;
+    /* padding-top: 20px; */
+    /* padding: 30px; */
+}`
+
+const Text = styled("div")`
 
 `
 
@@ -66,15 +84,15 @@ export default function Editor(props) {
     return (
         <WhiteBox>
             <Header>
-                <text> editor's note </text>
+                <text> Editor's Note </text>
             </Header> 
         <Box>
             <TextWrap>
-                <text>
+                <Text>
                 editor’s goes here headline goes here headline goes here headline goes here headline 
                 goes here headline goes here headline goes here headline goes here headline goes here 
                 headline goes here headline goes here headline goes here headline goes here headline goes here.
-                </text>
+                </Text>
             </TextWrap>
         </Box>
         </WhiteBox>

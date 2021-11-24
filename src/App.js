@@ -12,7 +12,9 @@ import { mediaQueries } from './shared/config';
 
 const Container = styled.div`
 padding: 10px 100px 10px 100px;
-background-color: yellow;
+/* background-color: linear-gradient(to bottom, rgb(166, 102, 99), rgb(191, 151, 134), rgb(222, 185, 105), rgb(68, 141, 182)); */
+/* background-color: -webkit-linear-gradient(#a66663 0%, #bf9786 25%, #deb969 50%, #448db6 75%); */
+background-image: linear-gradient(#a66663 0%, #bf9786 25%, #deb969 50%, #448db6 75%);
 ${mediaQueries.tablet}{
   padding: 10px 40px 10px 40px;
 }
