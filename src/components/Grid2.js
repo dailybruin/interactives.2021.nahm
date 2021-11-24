@@ -31,12 +31,37 @@ const colorToString = {
 };
 
 
-export default function Grid2(){
+export default function Grid2(props){
+    console.log(props.data)
+    console.log(props.data[1].image_link)
+    console.log(props.data[1].title)
     return (
-        <Grid>
-          <ArticleBox2 direction="left" color = {colorToString['blue']}></ArticleBox2>
-          <ArticleBox2 direction="right" color={colorToString['yellow']}></ArticleBox2>
+      
+        (props.data &&
+          <Grid>
+          <ArticleBox2 direction="left" 
+          color = {colorToString['blue']} 
+          image = {props.data[0].image_link}
+          section = {props.data[0].section}
+          sec_link = {props.data[0].section_link}
+          title = {props.data[0].title}
+          src = {props.data[0].article_link}
+          author = {props.data[0].byline}/>
+
+          <ArticleBox2 direction="right" color={colorToString['yellow']}
+          color = {colorToString['yellow']} 
+          image = {props.data[1].image_link}
+          section = {props.data[1].section}
+          sec_link = {props.data[1].section_link}
+          title = {props.data[1].title}
+          src = {props.data[1].article_link}
+          author = {props.data[1].byline}/>
         </Grid>
+        
+        )
+        
+      
+        
     );
 
 }

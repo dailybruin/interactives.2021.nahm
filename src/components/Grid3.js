@@ -54,23 +54,124 @@ const colorToString = {
 
 export default function Grid3(props){
   console.log(props.twoOnright);
+  console.log(props.data);
+
   if (props.twoOnRight) {
     return (
+      (props.data &&
         <Grid>
-          <ArticleBoxBig3 twoOnRight={props.twoOnRight} color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
-          <ArticleBoxSmall3 twoOnRight={props.twoOnRight} color={colorToString["brown"]} direction="small1"></ArticleBoxSmall3>
-          <ArticleBoxSmall3 twoOnRight={props.twoOnRight} color={colorToString["blue"]} direction="small2"></ArticleBoxSmall3>
+          {props.data.map(block=>{
+            if(block.type === 'picture') {
+              return(
+                <ArticleBoxBig3 
+            twoOnRight={props.twoOnRight} 
+            color = {colorToString["greyish_blue"]} 
+            direction="big" 
+            image = {block.art_link}
+            creds = {block.photo_credit}
+            text={block.photo_caption}/>
+              )
+            }
+            else if (block.type === 'article_card_top') {
+              console.log("enter top article card")
+              console.log(block.title);
+              console.log(block.image_link);
+              return(
+                <ArticleBoxSmall3 
+                  twoOnRight={props.twoOnRight} 
+                  color={colorToString["brown"]} 
+                  direction="small1"
+                  image = {block.image_link}
+                  section = {block.section}
+                  sec_link = {block.section_link}
+                  title = {block.title}
+                  src = {block.article_link}
+                  author = {block.byline}/>
+
+              )
+            }
+            else{
+              return(
+                <ArticleBoxSmall3 
+                  twoOnRight={props.twoOnRight} 
+                  color={colorToString["blue"]} 
+                  direction="small2"
+                  image = {block.image_link}
+                  section = {block.section}
+                  sec_link = {block.section_link}
+                  title = {block.title}
+                  src = {block.article_link}
+                  author = {block.byline}/>
+
+              )
+            }
+          })}
+      
+          
+         
         </Grid>
+        )
+        
     );
   }
 
   else{
     return (
+      (props.data &&
         <OtherGrid>
-          <ArticleBoxBig3 color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
+          {props.data.map(block=>{
+            if(block.type === 'picture') {
+              return(
+                <ArticleBoxBig3 
+            twoOnRight={props.twoOnRight} 
+            color = {colorToString["greyish_blue"]} 
+            direction="big" 
+            image = {block.art_link}
+            creds = {block.photo_credit}
+            text={block.photo_caption}/>
+              )
+            }
+            else if (block.type === 'article_card_top') {
+              console.log("enter top article card")
+              console.log(block.title);
+              console.log(block.image_link);
+              return(
+                <ArticleBoxSmall3 
+                  twoOnRight={props.twoOnRight} 
+                  color={colorToString["brown"]} 
+                  direction="small1"
+                  image = {block.image_link}
+                  section = {block.section}
+                  sec_link = {block.section_link}
+                  title = {block.title}
+                  src = {block.article_link}
+                  author = {block.byline}/>
+
+              )
+            }
+            else{
+              return(
+                <ArticleBoxSmall3 
+                  twoOnRight={props.twoOnRight} 
+                  color={colorToString["blue"]} 
+                  direction="small2"
+                  image = {block.image_link}
+                  section = {block.section}
+                  sec_link = {block.section_link}
+                  title = {block.title}
+                  src = {block.article_link}
+                  author = {block.byline}/>
+
+              )
+            }
+          })}
+          {/* <ArticleBoxBig3 color = {colorToString["greyish_blue"]} direction="big" text="Awesome granny saves life, turns out to be queen elizabeth"></ArticleBoxBig3>
           <ArticleBoxSmall3 color={colorToString["brown"]} direction="small1"></ArticleBoxSmall3>
-          <ArticleBoxSmall3 color={colorToString["yellow"]} direction="small2"></ArticleBoxSmall3>
+          <ArticleBoxSmall3 color={colorToString["yellow"]} direction="small2"></ArticleBoxSmall3> */}
         </OtherGrid>
+        
+        )
+        
     );
 
   }

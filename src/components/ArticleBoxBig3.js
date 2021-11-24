@@ -12,6 +12,8 @@ flex-direction: column;
 text-decoration: none;;
 justify-content: center;
 align-items: center;
+background-color: ${(props) => props.color};
+
 
 ${mediaQueries.tablet}{
   align-items: left;
@@ -23,7 +25,7 @@ const Image = styled.div`
   flex: 1 600px;
   width: 100%;
   object-fit: cover;
-  background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
+  background-image: url(${(props)=>props.src});
   background-position: center;
   background-size: cover;
   position: relative;
@@ -35,7 +37,7 @@ const Image = styled.div`
 
 const Text = styled.div`
 /* background-color: gray; */
-width: 100%;
+width: 90%;
 color: white;
 font-family: 'Roboto', sans-serif;
 font-size: 16px;
@@ -43,7 +45,6 @@ padding: 10px 0px 10px 0px;
 min-height: 60px;
 justify-content: center;
 text-align: center;
-background-color: ${(props) => props.color};
 
 ${mediaQueries.tablet}{
     font-size: 13px;
@@ -86,20 +87,17 @@ const BigText = styled("div")`
 export default function ArticleBoxBig3(props) {
     let dir = props.direction;
     let caption = props.text;
-    let source = "http://google.com"; //get it from props.src
+    console.log(props.image)
     return (
-        <Box direction = {dir} href={source}> 
-            <Image src="" alt="">
+        <Box direction = {dir} color={props.color}> 
+            <Image src={props.image} alt="">
               <BigTextContainer>
-                <BigText> Creds </BigText>
+                <BigText> {props.creds} </BigText>
               </BigTextContainer>
             </Image>
             
-            <Text color={props.color}>
-                {/* <News> NEWS </News>
-                Limited time on campus, remote learning presents unique challenges
-                <Byline> By Emily McAnnis </Byline> */}
-                {caption}
+            <Text >
+                {props.text}
             </Text>
         </Box>
       );

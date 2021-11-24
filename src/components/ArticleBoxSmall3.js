@@ -42,7 +42,7 @@ ${mediaQueries.tablet}{
 
 const Image = styled.div`
   object-fit: cover;
-  background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
+  background-image: url(${(props)=>props.src});
   background-position: center;
   background-size: cover;
   min-width: 50%;
@@ -82,14 +82,17 @@ font-weight: 400;
 export default function ArticleBoxSmall3(props) {
     let dir = props.direction;
     let source = "http://google.com"; //get value from props.src
+    console.log(props.direction);
+    console.log(props.image);
+    console.log(props.title);
     if (props.twoOnRight) {
     return (
-        <Box color={props.color} direction = {dir} href={source}> 
-            <Image src="" alt=""/>
+        <Box color={props.color} direction = {dir} href={props.src}> 
+            <Image src={props.image} alt=""/>
             <Text >
-                <News> NEWS </News>
-                Limited time on campus, remote learning presents unique challenges
-                <Byline> By Emily McAnnis </Byline>
+                <News> {props.section} </News>
+                {props.title}
+                <Byline> {props.author} </Byline>
             </Text>
         </Box>
       );
@@ -97,11 +100,11 @@ export default function ArticleBoxSmall3(props) {
     else{
       return (
         <ReverseBox color={props.color} direction = {dir} href={source}> 
-            <Image src="" alt=""/>
+            <Image src={props.image} alt=""/>
             <Text color={props.color}>
-                <News> TWO ON LEFT </News>
-                article title
-                <Byline> By Emily McAnnis </Byline>
+                <News> {props.section} </News>
+                {props.title}
+                <Byline> {props.author} </Byline>
             </Text>
             
             </ReverseBox>

@@ -20,7 +20,7 @@ const Image = styled.div`
   flex: 1 200px;
   min-height: 420px;
   width: 100%;
-  background-image: url(${"https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg"});
+  background-image: url(${(props)=>props.src});
   background-position: center;
   background-size: cover;
   ${mediaQueries.tablet}{
@@ -58,13 +58,14 @@ padding-bottom: 10px;
 export default function ArticleBox2(props) {
     let dir = props.direction;
     let color = props.color;
+    console.log(props.data)
     if (typeof(props.text) == 'undefined' && typeof(props.caption) != 'undefined') {
         return (
-          <Box direction = {dir} color={color} href={"http://google.com"}> 
-              <Image src="" alt=""/>
+          <Box direction = {dir} color={color} href={props.src}> 
+              <Image src={props.image} alt=""/>
               <Text >
-                  Limited time on campus, remote learning presents unique challenges
-                  <Byline> By Emily McAnnis </Byline>
+                  {props.title}
+                  <Byline> {props.byline} </Byline>
               </Text>
           </Box>
         );
@@ -72,12 +73,12 @@ export default function ArticleBox2(props) {
 
     else {
       return (
-          <Box direction = {dir} color={color} href={"http://google.com"}> 
-              <Image src="" alt=""/>
+          <Box direction = {dir} color={color} href={props.src}> 
+              <Image src={props.image} alt=""/>
               <Text color={color}>
-                  <News> NEWS </News>
-                  Limited time on campus, remote learning presents unique challenges
-                  <Byline> By Emily McAnnis </Byline>
+                  <News> {props.section} </News>
+                  {props.title}
+                  <Byline> {props.author} </Byline>
               </Text>
           </Box>
         );

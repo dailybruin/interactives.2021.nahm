@@ -8,6 +8,7 @@ const Box = styled("div")`
   height: 100vh;
   object-fit: cover;
   /* add background image details */
+  background-image: url(${props=>props.src});
   background-position: center;
   background-size: cover;
   position: relative;
@@ -22,9 +23,10 @@ const Credits = styled("div")`
 `;
 
 export default function Landing(props) {
+    console.log(props.src);
     return (
-        <Box>
-            <Credits>ILLUSTRATION BY </Credits>
+        <Box src={props.src}>
+            <Credits> {props.creds} </Credits>
         </Box>
     )
 }

@@ -84,14 +84,12 @@ export default function Editor(props) {
     return (
         <WhiteBox>
             <Header>
-                <text> Editor's Note </text>
+                <text> {props.title}</text>
             </Header> 
         <Box>
             <TextWrap>
                 <Text>
-                editor’s goes here headline goes here headline goes here headline goes here headline 
-                goes here headline goes here headline goes here headline goes here headline goes here 
-                headline goes here headline goes here headline goes here headline goes here headline goes here.
+                {props.text}
                 </Text>
             </TextWrap>
         </Box>
