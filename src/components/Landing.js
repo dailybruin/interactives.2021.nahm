@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 //import landingpage from "../images/landingpage.png";
+import { mediaQueries } from '../shared/config';
 
 
 const Box = styled("div")`
   width: 100%;
-  height: 100vh;
+  height: 98vh;
   object-fit: cover;
   /* add background image details */
   background-image: url(${props=>props.src});
@@ -20,6 +21,12 @@ const Credits = styled("div")`
   right: 50px;
   color: black;
   font-weight: bold;
+
+  ${mediaQueries.tablet}{
+    right: 0px;
+    font-size: 12px;
+    bottom: 8px;
+  }
 `;
 
 export default function Landing(props) {

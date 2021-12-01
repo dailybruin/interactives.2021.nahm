@@ -87,11 +87,15 @@ export default function ArticleBoxSmall3(props) {
     console.log(props.title);
     if (props.twoOnRight) {
     return (
-        <Box color={props.color} direction = {dir} href={props.src}> 
+        <Box color={props.color} direction = {dir}> 
             <Image src={props.image} alt=""/>
             <Text >
+            <a href={props.sec_link} >
                 <News> {props.section} </News>
+            </a>
+            <a href={props.src} >
                 {props.title}
+            </a>
                 <Byline> {props.author} </Byline>
             </Text>
         </Box>
@@ -102,8 +106,12 @@ export default function ArticleBoxSmall3(props) {
         <ReverseBox color={props.color} direction = {dir} href={source}> 
             <Image src={props.image} alt=""/>
             <Text color={props.color}>
+            <a href={props.sec_link} >
                 <News> {props.section} </News>
+            </a>
+            <a href={props.src} >
                 {props.title}
+            </a>
                 <Byline> {props.author} </Byline>
             </Text>
             

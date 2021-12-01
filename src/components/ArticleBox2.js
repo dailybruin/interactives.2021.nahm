@@ -73,11 +73,15 @@ export default function ArticleBox2(props) {
 
     else {
       return (
-          <Box direction = {dir} color={color} href={props.src}> 
+          <Box direction = {dir} color={color}> 
               <Image src={props.image} alt=""/>
               <Text color={color}>
+              <a href={props.sec_link} >
                   <News> {props.section} </News>
-                  {props.title}
+              </a>
+              <a href={props.src}>
+                  <text>{props.title} </text>
+              </a>
                   <Byline> {props.author} </Byline>
               </Text>
           </Box>

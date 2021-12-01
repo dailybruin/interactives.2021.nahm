@@ -26,10 +26,11 @@ const Header = styled("div")`
     top: 50px;
 
     ${mediaQueries.tablet}{
-    width: 40%;
+    width: 60%;
     height: 20px;
-    font-size: 20px;
+    font-size: 15px;
     padding: 40px;
+    /* font-size: 15px; */
     /* top: 60px; */
 }
 
@@ -49,6 +50,7 @@ const Box = styled("div")`
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-top: 3%;
     font-size: 30px;
 }
 `

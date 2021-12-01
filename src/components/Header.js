@@ -5,7 +5,7 @@ import DBLogo from '../images/db.svg'
 const DBHeader = styled("div")`
   z-index: 2001;
   position: relative;
-  background: #434343;
+  background: #4A4A4A;
   width: 100%;
   height: 2vh;
   padding: 0.2em 0;
@@ -17,7 +17,6 @@ const DBHeader = styled("div")`
   text-transform: uppercase;
   font-size: 18px;
   line-height: 21.6px;
-  background: grey;
 `;
 
 const Header = () => {
